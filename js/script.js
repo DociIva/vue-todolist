@@ -18,6 +18,18 @@ const app = new Vue({
                 text: 'Pagare le bollette',
                 completed: false,
             },
+            {
+                text: 'Fare gli esercizi',
+                completed: false,
+            },
+            {
+                text: 'Andare al mare',
+                completed: false,
+            },
+            {
+                text: 'Fare il bucato',
+                completed: false,
+            },
         ],
         newTodo: '',  // così metti dentro il nuovo mex
         editTodo: {
