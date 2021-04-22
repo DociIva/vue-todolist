@@ -23,22 +23,39 @@
        <header class="header"> 
           <h1>ToDo List</h1>
        </header>
-
+       
         <section class="todo-new">
            <input type="text"
            placeholder="Nuovo elemento da mettere"
+           v-model.trim="newTodo"
+           @keyup.enter="addTodo"
+           ref="todoInput"  
            />
-           <button>Aggiungi</button>
+
+           <button @click="addTodo">Aggiungi</button>
+
         </section>
 
         <section class="container-todos">
-            <ul>
-                <li class="todo">
-                    <span class="text">text text</span>
-                    <i class="fas fa-times"></i>
+            <!--rimane nel ul cosi se c'è contenuto , o se no v nel h2-->
+            <ul v-if="todos.length > 0">  <!--index = indice-->
+                <li class="todo" v-for="(todo, index) in todos">
+                    <span class="text"
+                          :class="{completed: todo.completed}"
+                          @click="updateStatus(index)"
+                    >
+
+                    {{ todo.text }}
+
+                    </span>
+
+                    <i class="fas fa-times"
+                       @click="removeTodo(index)"
+                    ></i>
+
                 </li>
-                
             </ul>
+            <h2 v-else >Non ci sono elementi</h2>
      
         </section>
        
