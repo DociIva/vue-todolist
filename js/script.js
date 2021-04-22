@@ -20,6 +20,11 @@ const app = new Vue({
             },
         ],
         newTodo: '',  // così metti dentro il nuovo mex
+        editTodo: {
+            visibility: false,
+            text: '',
+            index: 0,
+        }
     },
     methods: {
         addTodo() {
@@ -56,6 +61,24 @@ const app = new Vue({
 
         updateStatus(index) {
             this.todos[index].completed = ! this.todos[index].completed;
+        },
+
+
+        // per vedere la box 
+        showEdit(index) {
+            this.editTodo.text = this.todos[index].text;
+            this.editTodo.index = index;
+            this.editTodo.visibility = true;
+        },
+
+        updateTodo() {
+            console.log(this.editTodo);
+
+            this.todos[this.editTodo.index].text = this.editTodo.text;
+            
+            this.editTodo.text = false;
+            this.editTodo.index = '';
+            this.editTodo.visibility = 0;
         }
 
     }
