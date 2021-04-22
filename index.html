@@ -11,28 +11,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <!--Vue-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    
+    
    <div id="app" class="container">
+       <header class="header"> 
+          <h1>ToDo List</h1>
+       </header>
 
-        <input type="text"
-            placeholder="Inserisci qua"
-        >
-       <ul>
-           <li>
-               Fare la spesa
-           </li>
-           <li>
-               Portare il cane
-           </li>
-       </ul>
+        <section class="todo-new">
+           <input type="text"
+           placeholder="Nuovo elemento da mettere"
+           />
+           <button>Aggiungi</button>
+        </section>
 
+        <section class="container-todos">
+            <ul>
+                <li class="todo">
+                    <span class="text">text text</span>
+                    <i class="fas fa-times"></i>
+                </li>
+                
+            </ul>
+     
+        </section>
+       
    </div>
-
-
-
-
 
 
     <!--JS-->

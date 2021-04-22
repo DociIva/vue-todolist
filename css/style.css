@@ -4,9 +4,67 @@
     box-sizing: border-box;
 }
 body {
-    background-color: cornflowerblue;
+    font-family: 'Playfair Display', serif;
+    background-color: rgb(75, 142, 242);
 }
+
 /*Container -- App*/ 
 .container {
-    
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 16px;
+   
+}
+/*Header*/
+.header {
+    margin: 30px 0;
+    text-align: center;
+    color: lightcyan;
+    font-size: 20px;
+}
+/*Todo new*/
+.todo-new {
+    display: flex;
+}
+.todo-new input,
+.todo-new button {
+    height: 35px;
+    border: 0;
+}
+.todo-new input {
+    flex-grow: 1;
+    margin-right: 20px;
+    border-bottom: 1px solid white;
+    transition: border .4s;
+}
+.todo-new input:hover,
+.todo-new input:focus {
+    border-color: #000;
+}
+.todo-new button {
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    background:rgb(8, 33, 172);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background .4s;
+}
+.todo-new button:hover,
+.todo-new button:focus {
+    background: grey;
+}
+/*ToDo list*/
+.container-todos {
+    margin: 40px 0;
+    padding: 15px 30px;
+    background:teal;
+}
+.todo {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom:  1px solid grey;
 }
